@@ -1,0 +1,177 @@
+    1  $ git config --list --show-origin
+    2  git config --list --show-origin
+    3  git config --global user.name "Developer-Anibal"
+    4  git config --global user.email developer.anibal@gmail.com
+    5  exit
+    6  pwd
+    7  cd /c/
+    8  mkdir repos
+    9  cd repos
+   10  mkdir repo-local
+   11  cd repo-local/
+   12  git init
+   13  cd .git/
+   14  lh
+   15  alias lh='ls -lha'
+   16  lh 
+   17  cat config
+   18  cd ..
+   19  cd ..
+   20  git clone https://github.com/elidioana/hello-world.git
+   21  git clone https://github.com/Developer-Anibal/AIAGENT.git repo-clonado
+   22  ll
+   23  cd repo-clonado/
+   24  cd .git
+   25  cat config
+   26  git remote -v
+   27  history
+   28  cd ..
+   29  exit
+   30  cd /c/repos/
+   31  lh 
+   32  alias lh='ls -lha'
+   33  lh 
+   34  cd repo-local
+   35  lh 
+   36  git remote -v
+   37  pwd
+   38  git remote add origin https://github.com/Developer-Anibal/Developer-Anibal.git
+   39  cd .git
+   40  cat config
+   41  cd ..
+   42  history
+   43  pwd
+   44  git -v
+   45  git
+   46  git status
+   47  cd ..
+   48  mkdir dio-resumos-git-e-github
+   49  cd dio-resumos-git-e-github/
+   50  git init
+   51  git status
+   52  cd /c/reois
+   53  cd /c/repos
+   54  alias lh='ls -lha'
+   55  h 
+   56  lh 
+   57  cd dio-resumos-git-e-github/
+   58  git status
+   59  clear
+   60  git status
+   61  touch README.md
+   62  git status
+   63  vim README.md 
+   64  git add README.md 
+   65  git status
+   66  git commit -m "commit inicial"
+   67  git log
+   68  clear
+   69  git status
+   70  mkdir resumos
+   71  git status
+   72  touch resumos/resumo-aula1.md
+   73  git status
+   74  echo resumos/ > .gitignore
+   75  cat .gitignore 
+   76  git status
+   77  echo > .gitignore
+   78  git status
+   79  mkdir aulas
+   80  git status
+   81  touch aulas/.gitkeep
+   82  git status
+   83  git add .
+   84  git status
+   85  git commit -m"adicionar arquivo git ignore e diretórios de aula e resumos"
+   86  git status
+   87  git log
+   88  clear
+   89  git status
+   90  git status
+   91  git status
+   92  git log
+   93  history
+   94  git status
+   95  git add .
+   96  git status
+   97  git commit -m"adicionar arquivo com historico de comandos que foram utilizados"
+   98  git status
+   99  git log
+  100  cd ..
+  101  history | grep init
+  102  mkdir novapasta
+  103  cd novapasta/
+  104  git init
+  105  lh
+  106  rm -rf .git
+  107  lh 
+  108  git status
+  109  cd ..
+  110  lh 
+  111  cd dio-resumos-git-e-github/
+  112  git status
+  113  git status
+  114  echo "apaguei, sem querer, o conteúdo do README.md"
+  115  echo "vou restaurar com o comando seguinte"
+  116  git restore README.MD
+  117  git restore README.md
+  118  git status
+  119  echo "Quando for utilizar este comando, tenha certeza que não quer nenhuma das alterações daquele arquivo. Pq ele descarta todas as alterações localmente"
+  120  echo "como alterar a mensagem do último commit"
+  121  git log
+  122  git commit --amend -m"adiciona gitignore e diretórios aulas e resumos"
+  123  git log
+  124  h 
+  125  lh 
+  126  git log
+  127  clear
+  128  git log
+  129  git commit --amend
+  130  git log
+  131  echo "Imagine que não queria alterar a mensagem do último commit e sim desfazer ele, retornando ao commit anterior. Para isso, usamos o git reset, que dá as opções soft/mixed/hard"
+  132  git log
+  133  git reset --soft 90817d4dee52cf00839bb6a6bc9d5307266e3614
+  134  git status
+  135  echo "aparecem os arquivos POSTERIORES ao commit inicial"
+  136  echo "No caso, os arquivos que estavam no commit 'adicionar arquivo git ignore e diretórios de aula e resumos'"
+  137  git log
+  138  echo "Sumiu o último commit"
+  139  echo "soft - pega os arquivos que estavam naquele hash e coloca na área de preparação"
+  140  echo "soft - pega os arquivos que estavam naquele hash e coloca na área de preparação, staging area"
+  141  echo "envio o git add . e o commit novamente" 
+  142  git add .
+  143  git commit -m"soft"
+  144  git log
+  145  clear
+  146  git status
+  147  git log
+  148  git reset --mixed 90817d4dee52cf00839bb6a6bc9d5307266e3614
+  149  git status
+  150  git add .
+  151  git commit -m"mixed"
+  152  clear
+  153  git log
+  154  git status
+  155  git reset --hard 90817d4dee52cf00839bb6a6bc9d5307266e3614
+  156  git status
+  157  lh
+  158  echo "os arquivos foram apagados com hard"
+  159  git log
+  160  echo "o último commit já era"
+  161  git reflog
+  162  echo "alterações antes de enviar para o remoto"
+  163  echo "envio pode dar conflito"
+  164  echo "refaça enviando novo commit"
+  165  clear
+  166  mkdir resumos
+  167  touch resumos/aula-01.md resumos/aula-02.md
+  168  git status
+  169  git add .
+  170  git status
+  171  git reset resumos/aula-01.md
+  172  git status
+  173  echo "Outra forma de fazer isso é usar o restore"
+  174  git restore --staged resumos/aula-02.md 
+  175  git status
+  176  echo "Arquivos removidos da área de preparação"
+  177  history > history_20241028.txt
