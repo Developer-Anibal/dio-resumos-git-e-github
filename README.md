@@ -12,7 +12,7 @@ Repositório para armazenar resumos sobre Git e Github do curso Versionamento de
 | Aulas | Resumos |
 |-------|---------|
 | Inicializando repos | [Resumos](https://localhost/resumo1) |
-| Gravando alterações no Repositório local | [Resumos](https://localhost/resumo2) |
+| Gravando alterações no Repositório local | [Resumo](https://localhost/resumo2) |
 
 ## Edição de Código
 ```
